@@ -4,7 +4,7 @@ interface ToggleProps {
     goToNextMatch: any;
 }
 
-export default function ThemeToggle({goToPreviousMatch, matches, goToNextMatch}: ToggleProps) {
+export default function Scroller({goToPreviousMatch, matches, goToNextMatch}: ToggleProps) {
   return (
     <div className='flex justify-between m-4'>
           <button 
