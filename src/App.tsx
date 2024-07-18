@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import { Match } from './types/common';
 import { getMatchData } from './utils/getMatchData';
+import BrandLogo from './components/shared/brand-logo';
+import ThemeToggle from './components/micro/theme-toggle';
 
 function App() {
   const [matches, setMatches] = useState<Match[]>([]);
@@ -38,7 +40,7 @@ function App() {
   return (
     <div className={`container w-[500px] ${isDarkTheme ? 'bg-zinc-900 text-white' : 'bg-neutral-100 text-black'}`}>
       <div className='flex bg-indigo-900'>
-        <img className='m-2' src='https://www.oneturf.news/football/_next/static/media/logoDark.a6c53fff.svg' alt="Logo"/>
+        <BrandLogo/>
         <button
           className="ml-auto mr-2 mt-3 px-4 py-2 rounded-md bg-blue-500 text-white mb-4 text-xs"
           onClick={toggleTheme}
@@ -65,23 +67,7 @@ function App() {
         <text className='text-orange-600'>{currentMatch.oToss?.sText}</text>
         <div className='w-full p-4 bg-stone-50 text-left text-gray-700'>Standings &rarr;</div>
       </div>
-
-      <div className='flex justify-between m-4'>
-          <button 
-            className="px-4 py-2 rounded-md bg-blue-500 text-white"
-            onClick={goToPreviousMatch}
-            disabled={matches.length === 0}
-          >
-            Previous
-          </button>
-          <button 
-            className="px-4 py-2 rounded-md bg-blue-500 text-white"
-            onClick={goToNextMatch}
-            disabled={matches.length === 0}
-          >
-            Next
-          </button>
-        </div>
+      <ThemeToggle goToPreviousMatch={goToPreviousMatch} matches={matches} goToNextMatch={goToNextMatch}/>
     </div>
   );
 }
