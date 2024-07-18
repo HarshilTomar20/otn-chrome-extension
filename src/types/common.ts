@@ -19,6 +19,7 @@ export interface Match {
   sSubtitle: any;
   oTeamScoreA: any;
   oTeamScoreB: any;
+  sLiveGameStatusStr: any;
   oToss: any;
   oSeries: {
     sTitle: any;

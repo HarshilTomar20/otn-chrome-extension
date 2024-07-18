@@ -69,9 +69,16 @@ function App() {
       <div className='border-black dark:border-zinc-600 w-11/12 rounded-t-lg text-center m-4 bg-white dark:bg-stone-900'>
         <div className='px-4 pt-4'>
           <div className='flex text-xs'>
-            <text className='text-red-600 ml-2'>🔴 Live</text>
+            <text className='text-red-600 ml-2'>🔴 {currentMatch?.sLiveGameStatusStr && currentMatch.sLiveGameStatusStr.charAt(0).toUpperCase() + currentMatch.sLiveGameStatusStr.slice(1)}</text>
             <text className='text-gray-500 ml-2'>⚪️ {currentMatch.sSubtitle}</text>
-            <text className='text-gray-500 ml-2'>⚪️ {currentMatch?.oSeries?.sTitle}</text>
+            <text className='text-gray-500 ml-2'>
+              ⚪️ {currentMatch?.oSeries?.sTitle && 
+                (currentMatch.oSeries.sTitle.length > 26 
+                  ? `${currentMatch.oSeries.sTitle.slice(0, 26)}..` 
+                  : currentMatch.oSeries.sTitle
+                )
+              }
+            </text>
           </div>
           <TeamScores currentMatch={currentMatch} Bat={Bat}/>
           <TossResult currentMatch={currentMatch}/>
