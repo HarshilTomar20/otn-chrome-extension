@@ -71,10 +71,10 @@ function App() {
           </div>
           <text className='text-orange-600 text-left my-2'>{currentMatch.oToss?.sText}</text>
         </div>
-        <a href='' className='w-full p-4 rounded-b-lg bg-stone-50 dark:bg-stone-800 rounded text-left text-gray-700 dark:text-white'>Standings &rarr;</a>
+        <div className='w-full p-4 rounded-b-lg bg-stone-50 dark:bg-stone-800 rounded text-left text-gray-700 dark:text-white'>Standings &rarr;</div>
       </div>
       <Scroller goToPreviousMatch={goToPreviousMatch} matches={matches} goToNextMatch={goToNextMatch}/>
-      <div className='align-middle'>
+      <div className=''>
         <PoweredBy/>
       </div>
     </div>
