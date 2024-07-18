@@ -1,9 +1,9 @@
 interface ToggleThemeProps {
   HandleThemeSwitch: () => void;
-  theme: string;  // Changed 'any' to 'string' for better type safety
+  theme: string;  
 }
 
-function ThemeToggle({ HandleThemeSwitch, theme }: ToggleThemeProps) {
+export default function ThemeToggle({ HandleThemeSwitch, theme }: ToggleThemeProps) {
   return (
     <button
       className="ml-auto pr-6"
@@ -21,8 +21,8 @@ function ThemeToggle({ HandleThemeSwitch, theme }: ToggleThemeProps) {
         />
       )}
     </button>
-  );
+  )
 }
 
-export default ThemeToggle;
+
 
