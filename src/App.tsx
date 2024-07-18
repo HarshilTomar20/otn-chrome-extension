@@ -74,7 +74,7 @@ function App() {
         <div className='w-full p-4 rounded-b-lg bg-stone-50 dark:bg-stone-800 rounded text-left text-gray-700 dark:text-white'>Standings &rarr;</div>
       </div>
       <Scroller goToPreviousMatch={goToPreviousMatch} matches={matches} goToNextMatch={goToNextMatch}/>
-      <div className=''>
+      <div className='ml-40 py-4'>
         <PoweredBy/>
       </div>
     </div>
