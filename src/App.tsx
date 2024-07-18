@@ -62,6 +62,10 @@ function App() {
         <BrandLogo/>
         <ThemeToggle HandleThemeSwitch={HandleThemeSwitch} theme={theme} />
       </div>
+      <div className='w-full bg-orange-600 flex py-2 text-white'>
+        <text className='mx-4 font-bold'>Cricket</text>
+        <text className='font-thin'>Football</text>
+      </div>
       <div className='border-black dark:border-zinc-600 w-11/12 rounded-t-lg text-center m-4 bg-white dark:bg-stone-900'>
         <div className='px-4 pt-4'>
           <div className='flex text-xs'>
