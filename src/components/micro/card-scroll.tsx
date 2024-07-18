@@ -8,14 +8,14 @@ export default function Scroller({goToPreviousMatch, matches, goToNextMatch}: To
   return (
     <div className='flex justify-between m-4'>
           <button 
-            className="px-4 py-2 rounded-md bg-indigo-900 text-white"
+            className="px-4 py-2 rounded-md bg-indigo-900 text-white dark:bg-black"
             onClick={goToPreviousMatch}
             disabled={matches.length === 0}
           >
             &larr;
           </button>
           <button 
-            className="px-4 py-2 rounded-md bg-indigo-900 text-white"
+            className="px-4 py-2 rounded-md bg-indigo-900 text-white dark:bg-black"
             onClick={goToNextMatch}
             disabled={matches.length === 0}
           >
