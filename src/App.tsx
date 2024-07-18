@@ -7,6 +7,8 @@ import Scroller from './components/micro/card-scroll';
 import ThemeToggle from './components/shared/theme-toggle';
 import PoweredBy from './components/shared/powered-by';
 import TeamScores from './components/MatchCard/team-scores';
+import Standings from './components/MatchCard/standings-card';
+import TossResult from './components/MatchCard/toss-result';
 
 function App() {
   const [matches, setMatches] = useState<Match[]>([]);
@@ -68,11 +70,9 @@ function App() {
             <text className='text-gray-500 ml-2'>⚪️ {currentMatch?.oSeries?.sTitle}</text>
           </div>
           <TeamScores currentMatch={currentMatch} Bat={Bat}/>
-          <div className='my-4'>
-            <text className='text-orange-600 text-left'>{currentMatch.oToss?.sText}</text>
-          </div>
+          <TossResult currentMatch={currentMatch}/>
         </div>
-        <div className='w-full p-4 rounded-b-lg bg-stone-50 dark:bg-stone-800 rounded text-left text-gray-700 dark:text-white'>Standings &rarr;</div>
+        <Standings/>
       </div>
       <Scroller goToPreviousMatch={goToPreviousMatch} matches={matches} goToNextMatch={goToNextMatch}/>
       <div className='ml-40 py-4'>
