@@ -44,24 +44,24 @@ function App() {
         <BrandLogo/>
         <ThemeToggle toggleTheme={toggleTheme} isDarkTheme={isDarkTheme}/>
       </div>
-      <div className={`border-black w-11/12 rounded-lg text-center m-4 ${isDarkTheme ? 'bg-white': 'bg-zinc-800'} p-4`}>
+      <div className={`border-black w-11/12 rounded-lg text-center m-4 ${isDarkTheme ? 'bg-white': 'bg-zinc-800'} px-4 pt-4`}>
         <div className='flex'>
           <text className='text-red-600 ml-2'>* Live</text>
           <text className='text-gray-500 ml-2'>* {currentMatch.sSubtitle}</text>
           <text className='text-gray-500 ml-2'>* {currentMatch?.oSeries?.sTitle}</text>
         </div>
         <div>
-          <div className='flex mx-4 mt-2'>
+          <div className='flex mx-4 mt-2 text-black'>
               <span className='font-bold mr-auto'>{currentMatch.oTeamScoreA?.oTeam?.sAbbr}</span>
               <span className='text-lg'>{currentMatch.oTeamScoreA?.sScoresFull}</span>
           </div>
-          <div className='flex mx-4 mt-2'>
+          <div className='flex mx-4 mt-2 text-black'>
             <span className='font-bold mr-auto'>{currentMatch.oTeamScoreB?.oTeam?.sAbbr}</span>
             <span className='text-lg'>{Bat}</span>
           </div>
         </div>
-        <text className='text-orange-600'>{currentMatch.oToss?.sText}</text>
-        <div className='w-full p-4 bg-stone-50 text-left text-gray-700'>Standings &rarr;</div>
+        <text className='text-orange-600 text-left my-2'>{currentMatch.oToss?.sText}</text>
+        <div className={`w-full p-4 -mx-4 ${isDarkTheme ? 'bg-stone-50': 'bg-zinc-900'} text-left text-gray-700`}>Standings &rarr;</div>
       </div>
       <Scroller goToPreviousMatch={goToPreviousMatch} matches={matches} goToNextMatch={goToNextMatch}/>
     </div>
