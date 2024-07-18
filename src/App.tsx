@@ -40,11 +40,11 @@ function App() {
 
   return (
     <div className={`container w-[500px] ${isDarkTheme ? 'bg-zinc-900 text-white' : 'bg-neutral-100 text-black'}`}>
-      <div className='flex bg-indigo-900 py-2'>
+      <div className={`flex ${isDarkTheme ? 'bg-indigo-900': 'bg-zinc-900'}  py-2`}>
         <BrandLogo/>
         <ThemeToggle toggleTheme={toggleTheme} isDarkTheme={isDarkTheme}/>
       </div>
-      <div className='border-black w-11/12 rounded-lg text-center m-4 bg-white p-4'>
+      <div className={`border-black w-11/12 rounded-lg text-center m-4 ${isDarkTheme ? 'bg-white': 'bg-zinc-800'} p-4`}>
         <div className='flex'>
           <text className='text-red-600 ml-2'>* Live</text>
           <text className='text-gray-500 ml-2'>* {currentMatch.sSubtitle}</text>
