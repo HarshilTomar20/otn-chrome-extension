@@ -1,0 +1,21 @@
+export const ENUM_CRICKET_MATCH_PAGES = {
+    i: 'info',
+    n: 'news',
+    v: 'videos',
+    f: 'fixtures',
+    s: 'points-table',
+    st: 'stats',
+    t: 'teams',
+    sq: 'squads',
+    ar: 'archives',
+    // ft: 'fantasy-tips',
+    sc: 'full-scorecard',
+    o: 'overs',
+    far: 'fixtures-and-results',
+    r: 'results',
+    c: 'commentary',
+    u: 'upcoming',
+    p: 'photos',
+    ls: 'live-stats',
+    lb: 'live-blog'
+  }

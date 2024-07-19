@@ -83,7 +83,7 @@ function App() {
           <TeamScores currentMatch={currentMatch} Bat={Bat}/>
           <TossResult currentMatch={currentMatch}/>
         </div>
-        <Standings/>
+        <Standings currentMatch={currentMatch}/>
       </div>
       <Scroller goToPreviousMatch={goToPreviousMatch} matches={matches} goToNextMatch={goToNextMatch}/>
       <div className='ml-40 py-4'>
